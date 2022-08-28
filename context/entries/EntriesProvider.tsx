@@ -15,19 +15,19 @@ const Entries_INITIAL_STATE: EntriesState = {
     entries: [
         {
             _id: uuidv4(),
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
+            description: 'Pendiente: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
             status: 'pending',
             createdAt: Date.now()
         },
         {
             _id: uuidv4(),
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
+            description: 'In-Progress: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
             status: 'in-progress',
             createdAt: Date.now() - 50004
         },
         {
             _id: uuidv4(),
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
+            description: 'Completadas: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
             status: 'finished',
             createdAt: Date.now() - 88888
         }
