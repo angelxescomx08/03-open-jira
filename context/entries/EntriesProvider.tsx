@@ -12,33 +12,14 @@ export interface EntriesState {
 }
 
 const Entries_INITIAL_STATE: EntriesState = {
-    entries: [
-        {
-            _id: uuidv4(),
-            description: 'Pendiente: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
-            status: 'pending',
-            createdAt: Date.now()
-        },
-        {
-            _id: uuidv4(),
-            description: 'In-Progress: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
-            status: 'in-progress',
-            createdAt: Date.now() - 50004
-        },
-        {
-            _id: uuidv4(),
-            description: 'Completadas: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed blanditiis facilis quidem nobis quasi totam ullam suscipit asperiores nisi pariatur aspernatur illo voluptates, quis commodi architecto? Qui, magnam consequuntur. Aliquam.',
-            status: 'finished',
-            createdAt: Date.now() - 88888
-        }
-    ],
+    entries: [],
 }
 
 export const EntriesProvider: FC<Props> = ({ children }) => {
 
     const [state, dispatch] = useReducer(entriesReducer, Entries_INITIAL_STATE)
 
-    const addNewEntry = (description: string) =>{
+    const addNewEntry = (description: string) => {
         const newEntry: Entry = {
             _id: uuidv4(),
             description,
@@ -52,8 +33,8 @@ export const EntriesProvider: FC<Props> = ({ children }) => {
         })
     }
 
-    const updateEntry = (entry: Entry) =>{
-        dispatch({type: '[Entry] - Entry-Updated',payload: entry});
+    const updateEntry = (entry: Entry) => {
+        dispatch({ type: '[Entry] - Entry-Updated', payload: entry });
     }
 
     return (
@@ -64,7 +45,7 @@ export const EntriesProvider: FC<Props> = ({ children }) => {
             addNewEntry,
             updateEntry
         }}>
-           {children}
+            {children}
         </EntriesContext.Provider>
     )
 }

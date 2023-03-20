@@ -34,6 +34,9 @@ export const conect = async () => {
 }
 
 export const disconect = async () => {
+
+    if (process.env.NODE_ENV === 'development') return;
+
     if (mongooConection.isConnected === 0) {
         return;
     }
